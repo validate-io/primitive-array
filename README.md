@@ -1,4 +1,4 @@
-primitive-array
+Primitive Array
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,39 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-primitive-array' );
+var isPrimitiveArray = require( 'validate.io-primitive-array' );
 ```
 
-#### foo( value )
+#### isPrimitiveArray( value )
 
-What does this function do?
+Validates if a `value` is an `array` of JavaScript primitives.
+
+``` javascript
+var value = [ false, null, undefined, '', 0 ];
+
+var bool = isPrimitiveArray( value );
+// returns true
+```
+
+__Note__: the method returns `false` for an empty `array`.
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-primitive-array' );
+var isPrimitiveArray = require( 'validate.io-primitive-array' );
+
+console.log( isPrimitiveArray( [null,undefined,'',0,false] ) );
+// returns true
+
+console.log( isPrimitiveArray( [] ) );
+// returns false
+
+console.log( isPrimitiveArray( [[],{}] ) );
+// returns false
+
+console.log( isPrimitiveArray( [new Boolean(), new Number(), new String()] ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,

@@ -26,12 +26,26 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "primitive",
+    "array",
+    "is",
+    "null",
+    "boolean",
+    "string",
+    "number",
+    "undefined",
+    "primitivearray",
+    "isprimitivearray"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/primitive-array/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "validate.io-array": "^1.0.3",
+    "validate.io-primitive": "^1.0.0"
+  },
   "devDependencies": {
     "chai": "1.x.x",
     "mocha": "1.x.x",
